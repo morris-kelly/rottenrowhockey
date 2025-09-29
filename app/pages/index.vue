@@ -24,8 +24,7 @@
       <div class="container">
         <h3>Our Teams</h3>
         <section>
-          2 Outdoor Teams - West District Division 1 and West District Division
-          2<br /><br />
+          3 Outdoor Teams - West District Division 1, 2 and 3<br /><br />
           1 Indoor Team - West District Indoor
         </section>
       </div>
