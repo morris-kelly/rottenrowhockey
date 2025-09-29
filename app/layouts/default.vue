@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div :class="{ 'is-mobile-menu-visible': isMobileMenuActive }">
     <!-- Header -->
-    <section id="header" :class="{ 'mobile-active': isMobileMenuActive }">
+    <section id="header" :class="{ 'mobile-menu-active': isMobileMenuActive }">
       <header>
         <span class="image avatar">
           <img src="~/assets/avatar.png" alt="Avatar" />
@@ -49,22 +49,22 @@
       <footer>
         <ul class="icons">
           <li>
-            <Icon name="mdi-email">
-              <a href="mailto:chairman@rottenrowhockey.co.uk">
+            <a href="mailto:chairman@rottenrowhockey.co.uk" title="Email">
+              <Icon name="mdi-email">
                 <span class="label">Email</span>
-              </a>
-            </Icon>
+              </Icon>
+            </a>
           </li>
           <li>
-            <Icon name="mdi-instagram">
-              <a
-                href="https://www.instagram.com/rottenrowhc/"
-                target="_blank"
-                title="Instagram"
-              >
+            <a
+              href="https://www.instagram.com/rottenrowhc/"
+              target="_blank"
+              title="Instagram"
+            >
+              <Icon name="mdi-instagram">
                 <span class="label">Instagram</span>
-              </a>
-            </Icon>
+              </Icon>
+            </a>
           </li>
         </ul>
       </footer>
@@ -87,9 +87,11 @@
       </section>
     </div>
 
-    <!-- Mobile Title Bar -->
+    <!-- Title Bar -->
     <div id="titleBar">
-      <a href="#header" class="toggle" @click="toggleMobileMenu"></a>
+      <a href="#header" class="toggle" @click.prevent="toggleMobileMenu">
+        <Icon name="mdi-menu" class="toggle"> </Icon>
+      </a>
       <span class="title">
         <NuxtLink to="/">Rottenrow Hockey Club</NuxtLink>
       </span>
